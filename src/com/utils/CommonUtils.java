@@ -14,7 +14,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 //import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -77,14 +76,15 @@ public class CommonUtils extends TestBase {
             // options.addArguments("disable-infobars");
             // driver = new ChromeDriver(options);
 
+			
+			//
             // Code to run in normal browser UI mode
         	ChromeOptions chromeOptions= new ChromeOptions();//--
-        	chromeOptions.setBinary("C:/Users/supriya_ingale/AppData/Local/Google/Chrome/Application/chrome.exe");//--
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+        	chromeOptions.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");//--
+           System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
             System.setProperty("http.maxRedirects", "999");
             driver = new ChromeDriver(chromeOptions);//--
             driver.manage().window().maximize();
-
 
         }
 
