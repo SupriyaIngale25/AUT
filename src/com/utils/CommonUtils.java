@@ -76,14 +76,11 @@ public class CommonUtils extends TestBase {
             // options.addArguments("disable-infobars");
             // driver = new ChromeDriver(options);
 
-			
-			//
             // Code to run in normal browser UI mode
-        	ChromeOptions chromeOptions= new ChromeOptions();//--
-        	chromeOptions.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");//--
-           System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
             System.setProperty("http.maxRedirects", "999");
-            driver = new ChromeDriver(chromeOptions);//--
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
 
         }
